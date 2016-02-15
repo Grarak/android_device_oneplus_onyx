@@ -236,7 +236,10 @@ on post-fs
     chmod 0644 /sys/class/leds/blue/blink
     chmod 0644 /sys/class/leds/green/blink
 
-    # Tri-state keys
+    # Buttons
+    chown root system /proc/s1302/key_rep
+    chmod 0660 /proc/s1302/key_rep
+
     chown system system /sys/devices/tri_state_key.86/keyCode_top
     chown system system /sys/devices/tri_state_key.86/keyCode_middle
     chown system system /sys/devices/tri_state_key.86/keyCode_bottom
